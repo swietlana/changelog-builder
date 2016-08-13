@@ -3,3 +3,5 @@ Learning Python &amp; Django
 
 First time with git
 Second time with git
+
+Nice learning here :)
