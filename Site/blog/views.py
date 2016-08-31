@@ -1,7 +1,9 @@
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import redirect, render, get_object_or_404
 from django.utils import timezone
 from .models import Post
 from .forms import PostForm
+
 
 def message_list(request):
     messages = [
@@ -16,6 +18,14 @@ def message_list(request):
     ,{'commit': 'abcdefg',
     'text': 'Test text3',
     'title': 'Test title3'
+    }
+    ,{'commit': 'abcdefghi',
+    'text': 'Test text4',
+    'title': 'Test title4'
+    }
+    ,{'commit': 'abcdefghijk',
+    'text': 'Test text5',
+    'title': 'Test title5'
     }
     ]
     return render(request, 'blog/message_list.html', {'messages': messages})

@@ -3,8 +3,11 @@
 {% block content %}
     {% for message in messages %}
         <div class="post">
-            <h2>{{ message.title }}</h2>
-            <p>{{ message.text|linebreaksbr }}</p>
+            <p class="checkbox"><input type="checkbox" name="checkbox" value="{{ checkbox.pk }}"></p>
+            <div class="post-text">
+              <h2>{{ message.title }}</h2>
+              <p>{{ message.text|linebreaksbr }}</p>
+            </div>
         </div>
     {% endfor %}
 {% endblock content %}
