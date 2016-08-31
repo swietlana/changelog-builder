@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for message in messages %}
+        <div class="post">
+            <h2>{{ message.title }}</h2>
+            <p>{{ message.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
